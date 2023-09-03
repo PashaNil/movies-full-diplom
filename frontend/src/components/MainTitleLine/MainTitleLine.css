@@ -1,0 +1,20 @@
+.title-line {
+  margin: 0;
+  padding: 0;
+  font-family: Inter;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.88px;
+  width: 100%;
+  min-height: 50px;
+  border-bottom: 1px solid #DADADA;
+}
+
+@media screen and (max-width:730px) {
+  .title-line {
+    font-size: 18px;
+    letter-spacing: -0.72px;
+  }
+}

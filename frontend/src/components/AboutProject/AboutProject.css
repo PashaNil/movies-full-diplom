@@ -1,0 +1,153 @@
+.about-project {
+  margin: 0;
+  padding: 110px 70px;
+  display: flex;
+  flex-direction: column;
+  max-width: 1280px;
+}
+
+.about-project__table {
+  margin: 70px 0 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 40px;
+  list-style: none;
+}
+
+.about-project__table-title {
+  margin: 0;
+  padding: 0;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.8px;
+}
+
+.about-project__table-text {
+  margin: 26px 0 0 0;
+  padding: 0;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.about-project__timeline {
+  margin: 110px 0 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 228px auto;
+  grid-template-rows: 36px auto;
+  list-style: none;
+}
+
+.about-project__timeline-text-one {
+  margin: 0;
+  padding: 9px 14px;
+  color: #000;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background: #3DDC84;
+  text-align: center;
+}
+
+.about-project__timeline-text-four {
+  margin: 0;
+  padding: 9px 14px;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+  background: #303030;
+}
+
+.about-project__timeline-text-development {
+  margin: 0;
+  padding: 14px 0 0 0;
+  color: #8B8B8B;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 17px;
+  text-align: center;
+}
+
+@media screen and (max-width:1100px) {
+  .about-project {
+    padding: 90px 50px;
+  }
+
+  .about-project__table {
+    column-gap: 30px;
+  }
+
+  .about-project__table-text {
+    margin-top: 22px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .about-project__timeline {
+    margin-top: 93px;
+    grid-template-columns: 140px auto;
+  }
+}
+
+@media screen and (max-width:730px) {
+  .about-project {
+    padding: 70px 18px;
+  }
+
+  .about-project__table {
+    margin-top: 60px;
+    grid-template-columns: auto;
+    column-gap: 0;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 56px;
+  }
+
+  .about-project__table-title {
+    font-size: 18px;
+    letter-spacing: -0.72px;
+  }
+
+  .about-project__table-text {
+    margin-top: 16px;
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  .about-project__timeline {
+    margin-top: 60px;
+    grid-template-columns: 100px auto;
+    grid-template-rows: 35px auto;
+  }
+
+  .about-project__timeline-text-one {
+    padding: 11px 10px;
+    font-size: 11px;
+  }
+
+  .about-project__timeline-text-four {
+    padding: 11px 52px;
+    font-size: 11px;
+  }
+
+  .about-project__timeline-text-development {
+    padding-top: 10px;
+    color: #A0A0A0;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: normal;
+  }
+}

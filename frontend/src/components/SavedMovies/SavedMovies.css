@@ -1,0 +1,9 @@
+.savedMovies {
+  margin: 0;
+  padding: 0;
+}
+
+.savedMovies__movies-container {
+  margin: 0;
+  padding: 0 0 90px 0;
+}
