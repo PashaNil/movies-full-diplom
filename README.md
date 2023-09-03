@@ -1,7 +1,7 @@
 # movies-full-diplom
 
-# https://api.movies.danilov.nomoredomainsicu.ru
+### Api page https://api.movies.danilov.nomoredomainsicu.ru
 
-# https://movies.danilov.nomoredomainsicu.ru
+### Front page https://movies.danilov.nomoredomainsicu.ru
 
-# https://github.com/PashaNil/movies-full-diplom/pull/1
+### Git https://github.com/PashaNil/movies-full-diplom/pull/1
