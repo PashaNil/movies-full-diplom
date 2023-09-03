@@ -1,6 +1,6 @@
 import { getResponseData } from "./getResponseData";
 
-const baseUrl = "http://localhost:3000"
+const baseUrl = "https://api.movies.danilov.nomoredomainsicu.ru"
 
 const registerApi = (name, email, password) => {
   return fetch(`${baseUrl}/signup`, {
