@@ -1,10 +1,8 @@
 import { getResponseData } from "./getResponseData";
-
-const baseUrl = "https://api.movies.danilov.nomoredomainsicu.ru"
-/* const baseUrl = "http://localhost:3000" */
+import {BASE_URL} from './constant';
 
 const registerApi = (name, email, password) => {
-  return fetch(`${baseUrl}/signup`, {
+  return fetch(`${BASE_URL}/signup`, {
     method: "POST",
     headers: {
       'Accept': 'application/json',
@@ -20,7 +18,7 @@ const registerApi = (name, email, password) => {
 }
 
 const loginApi = (email, password) => {
-  return fetch(`${baseUrl}/signin`, {
+  return fetch(`${BASE_URL}/signin`, {
     method: "POST",
     headers: {
       'Accept': 'application/json',

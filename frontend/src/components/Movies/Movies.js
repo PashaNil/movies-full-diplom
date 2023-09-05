@@ -36,8 +36,8 @@ function Movies(
 
   // Отображение ошибки найденных фильмов
   React.useEffect(() => {
-    if(allMovies?.length > 0){
-    numberMoviesFound > 0 ? setErrorCodeMovie(null) : setErrorCodeMovie(404);
+    if (allMovies?.length > 0) {
+      numberMoviesFound > 0 ? setErrorCodeMovie(null) : setErrorCodeMovie(404);
     }
   }, [allMovies, numberMoviesFound, setErrorCodeMovie])
 

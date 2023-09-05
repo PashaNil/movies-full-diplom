@@ -2,6 +2,7 @@ import React from "react";
 import "./MoviesCard.css";
 import crossImg from "../../images/crossMenu.svg";
 import { useLocation } from "react-router";
+import { MINUTES_60 } from "../../utils/constant";
 
 function MoviesCard({ movieData, listSaveMovies, saveChosenMovie, deleteChosenMovie }) {
   const location = useLocation().pathname === "/movies";
@@ -32,8 +33,8 @@ function MoviesCard({ movieData, listSaveMovies, saveChosenMovie, deleteChosenMo
 
   // Преобразование времени карточки
   function conversionTime(time) {
-    const hours = Math.floor(time / 60);
-    const minutes = time % 60;
+    const hours = Math.floor(time / MINUTES_60);
+    const minutes = time % MINUTES_60;
     if (hours === 0) {
       return `${minutes}м`
     }
@@ -63,7 +64,7 @@ function MoviesCard({ movieData, listSaveMovies, saveChosenMovie, deleteChosenMo
             onClick={handleChoice}
           />
           :
-          <button className="moviesCard__remove" type="button" onClick={()=> deleteChosenMovie(movieData._id)}>
+          <button className="moviesCard__remove" type="button" onClick={() => deleteChosenMovie(movieData._id)}>
             <img className="moviesCard__cross-img" src={crossImg} alt="Крестик удаления карточки" />
           </button>
         }

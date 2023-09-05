@@ -1,11 +1,9 @@
+import {BASE_URL} from './constant';
 import { getResponseData } from "./getResponseData";
-
-const baseUrl = "https://api.movies.danilov.nomoredomainsicu.ru"
-/* const baseUrl = "http://localhost:3000" */
 
 // Cохраненные фильмы
 const getSaveMoviesApi = () => {
-  return fetch(`${baseUrl}/movies`, {
+  return fetch(`${BASE_URL}/movies`, {
     method: "GET",
     headers: {
       'Accept': 'application/json',
@@ -18,7 +16,7 @@ const getSaveMoviesApi = () => {
 
 // Отправка фильма
 const addMovieApi = (movieData) => {
-  return fetch(`${baseUrl}/movies`, {
+  return fetch(`${BASE_URL}/movies`, {
     method: "POST",
     headers: {
       'Accept': 'application/json',
@@ -44,7 +42,7 @@ const addMovieApi = (movieData) => {
 
 // Удаление фильма
 const deleteMovieApi = (movieId) => {
-  return fetch(`${baseUrl}/movies/${movieId}`, {
+  return fetch(`${BASE_URL}/movies/${movieId}`, {
     method: "DELETE",
     headers: {
       'Accept': 'application/json',
@@ -57,7 +55,7 @@ const deleteMovieApi = (movieId) => {
 
 // Получение информации о пользователе
 const getUserInfoApi = (token) => {
-  return fetch(`${baseUrl}/users/me`, {
+  return fetch(`${BASE_URL}/users/me`, {
     method: "GET",
     headers: {
       'Accept': 'application/json',
@@ -70,7 +68,7 @@ const getUserInfoApi = (token) => {
 
 // Обновление данных пользователя
 const updateProfileApi = (name, email, token) => {
-  return fetch(`${baseUrl}/users/me`, {
+  return fetch(`${BASE_URL}/users/me`, {
     method: "PATCH",
     headers: {
       'Accept': 'application/json',
