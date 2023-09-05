@@ -7,8 +7,6 @@ function Input({
   id,
   name,
   errValid,
-  pattern,
-  titlePattern,
   preloaderStatus
 }) {
 
@@ -22,8 +20,6 @@ function Input({
         name={name}
         placeholder={labelText}
         required
-        pattern={pattern}
-        title={titlePattern}
         minLength="2"
         maxLength="30"
         disabled={preloaderStatus}

@@ -4,7 +4,6 @@ import Form from "../Form/Form";
 import Input from "../Input/Input";
 
 import { useFormWithValidation } from "../../hooks/useValidForm";
-import { regExInputName, regExInputEmail } from "../../utils/regularExpressions";
 import { handlingErrorSignUp } from "../../utils/HandlingErrorMsg";
 
 function Register({ handleRegister, errorCodeForm, preloaderStatus }) {
@@ -40,8 +39,6 @@ function Register({ handleRegister, errorCodeForm, preloaderStatus }) {
           id={"name"}
           name={"name"}
           errValid={errors.name}
-          pattern={regExInputName}
-          titlePattern={"Имя может содержать от 2 до 30 знаков, пробелы и дефисы"}
           preloaderStatus={preloaderStatus}
         />
         <Input
@@ -50,8 +47,6 @@ function Register({ handleRegister, errorCodeForm, preloaderStatus }) {
           id={"email"}
           name={"email"}
           errValid={errors.email}
-          pattern={regExInputEmail}
-          titlePattern={"Email должен состоять из латинских символов. Пример user@adress.ru"}
           preloaderStatus={preloaderStatus}
         />
         <Input

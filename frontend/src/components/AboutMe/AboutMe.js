@@ -7,7 +7,9 @@ function AboutMe() {
   return (
     <section className="aboutMe">
       <MainTitleLine text={"Студент"} />
+      <div className="aboutMe__student-container">
       <img className="aboutMe__student-img" src={imgStudent} alt="Фотография студента" />
+      <div className="aboutMe__student-info">
       <h2 className="aboutMe__student-name">Павел</h2>
       <p className="aboutMe__student-job">Фронтенд-разработчик, 28 лет</p>
       <p className="aboutMe__student-description">
@@ -19,6 +21,8 @@ function AboutMe() {
         target="_blank"
         rel="noreferrer"
       >Github</a>
+      </div>
+      </div>
       <Portfolio />
     </section>
   );

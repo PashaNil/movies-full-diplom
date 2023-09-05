@@ -166,10 +166,13 @@ function App() {
           console.log(`Ошибка запроса: ${err.statusText} Код: ${err.status}`);
           setErrorCodeForm(404);
           setLoggedIn(false);
+          localStorage.clear();
         })
         .finally(() => setPreloaderStatus(false));
     } else {
       setErrorCodeForm(400)
+      setLoggedIn(false);
+      localStorage.clear();
     }
   }
 

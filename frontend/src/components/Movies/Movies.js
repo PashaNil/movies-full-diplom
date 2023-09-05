@@ -42,7 +42,10 @@ function Movies(
   }, [allMovies, numberMoviesFound, setErrorCodeMovie])
 
   // Функция изменения состояния чек-бокса.
-  const handleCheckBox = () => setCheckBoxStatus(!checkBoxStatus);
+  const handleCheckBox = () => {
+    setCheckBoxStatus(!checkBoxStatus)
+    allMovies?.length > 0 && saveHistoryLocal(!checkBoxStatus, valueSearch);
+  };
 
   // Поиск фильма
   function handlerSearch(inputValue) {

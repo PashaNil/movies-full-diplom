@@ -43,6 +43,10 @@
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  max-width: 219px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .moviesCard__time {
@@ -98,6 +102,10 @@
     width: 339px;
   }
 
+  .moviesCard__title {
+    max-width: 290px;
+  }
+
   .moviesCard__img {
     height: 190px;
     width: 339px;
@@ -107,6 +115,10 @@
 @media screen and (max-width: 767px) {
   .moviesCard {
     width: 300px;
+  }
+
+  .moviesCard__title {
+    max-width: 250px;
   }
 
   .moviesCard__img {

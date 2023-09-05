@@ -1,6 +1,7 @@
 import { getResponseData } from "./getResponseData";
 
 const baseUrl = "https://api.movies.danilov.nomoredomainsicu.ru"
+/* const baseUrl = "http://localhost:3000" */
 
 // Cохраненные фильмы
 const getSaveMoviesApi = () => {

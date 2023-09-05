@@ -13,17 +13,17 @@ function MoviesCardList({ children, errorCodeMovie, setNumberMoviesFound }) {
 
   // Состояние кнопки "еще" при получении фильмов и изменении количества.
   React.useEffect(() => {
-    numberMoviesPage <= children?.length ? setDisablingMoreBtn(false) : setDisablingMoreBtn(true);
+     children?.length > numberMoviesPage ? setDisablingMoreBtn(false) : setDisablingMoreBtn(true);
   }, [children, numberMoviesPage])
 
-  // Стартовая ширина страниы.
+  // Стартовая ширина страниы c количество карточек и кнопкой еще
   React.useEffect(() => {
     countsMoviesFromWidth();
-  }, [])
+  }, [children])
 
   // Отправляет кол-во отображаемых фильмов в родительский компонент
   React.useEffect(() => {
-    setNumberMoviesFound(children.length);
+    setNumberMoviesFound(children?.length);
   }, [children, setNumberMoviesFound])
 
   // Слушатель изменения размера страницы.
@@ -36,22 +36,25 @@ function MoviesCardList({ children, errorCodeMovie, setNumberMoviesFound }) {
   // Функция считающая количество карточек в зависимости от принятой ширины.
   function countsMoviesFromWidth() {
     const widthPage = window.innerWidth;
-    if (widthPage > 1100) {
+    if(widthPage >= 1280){
       setNumberMoviesPage(16);
-      return 16;
-    } else if (widthPage > 730) {
+      return 4;
+    } else if (widthPage > 1100){
+      setNumberMoviesPage(12);
+      return 3
+    } else if (widthPage > 639){
       setNumberMoviesPage(8);
-      return 8;
+      return 2;
     } else {
       setNumberMoviesPage(5);
-      return 5;
+      return 2;
     }
   }
 
   // Слушатель кнопки "еще". Добавляет еще столько же фильмов на страницу.
   function handleMoreMovies() {
-    if (numberMoviesPage <= children.length) {
-      setNumberMoviesPage(numberMoviesPage + countsMoviesFromWidth(window.innerWidth));
+    if (children?.length >= numberMoviesPage) {
+      setNumberMoviesPage((number) => number + countsMoviesFromWidth(window.innerWidth));
     }
   }
 

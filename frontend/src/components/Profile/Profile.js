@@ -4,7 +4,6 @@ import Header from "../Header/Header.js";
 
 import { CurrentUserContext } from '../../contexts/CurrentUserContext';
 import { useFormWithValidation } from "../../hooks/useValidForm";
-import { regExInputName, regExInputEmail } from "../../utils/regularExpressions";
 import { handlingErrorProfile } from "../../utils/HandlingErrorMsg";
 
 function Profile(
@@ -58,8 +57,6 @@ function Profile(
               placeholder={currentUser.name}
               minLength="2"
               maxLength="30"
-              pattern={regExInputName}
-              title="Имя может содержать от 2 до 30 знаков, пробелы и дефисы"
               required
               defaultValue={currentUser.name}
               disabled={preloaderStatus}
@@ -76,8 +73,6 @@ function Profile(
               placeholder={currentUser.email}
               minLength="2"
               maxLength="30"
-              pattern={regExInputEmail}
-              title="Email должен состоять из латинских символов. Пример user@adress.ru"
               required
               defaultValue={currentUser.email}
               disabled={preloaderStatus}

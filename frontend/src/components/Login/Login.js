@@ -3,7 +3,6 @@ import Form from "../Form/Form.js";
 import Input from "../Input/Input.js";
 
 import { useFormWithValidation } from "../../hooks/useValidForm";
-import { regExInputEmail } from "../../utils/regularExpressions";
 import { handlingErrorSignIn } from "../../utils/HandlingErrorMsg";
 
 function Login({ handleLogin, errorCodeForm, preloaderStatus }) {
@@ -40,8 +39,6 @@ function Login({ handleLogin, errorCodeForm, preloaderStatus }) {
           id={"email"}
           name={"email"}
           errValid={errors.email}
-          pattern={regExInputEmail}
-          titlePattern={"Email должен состоять из латинских символов. Пример user@adress.ru"}
           preloaderStatus={preloaderStatus}
         />
         <Input
